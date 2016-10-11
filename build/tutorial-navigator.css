@@ -1,0 +1,635 @@
+.js-carousel .dots {
+  padding: 20px 0;
+}
+.js-carousel .dots .dot {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background: color_oil;
+  opacity: 0.3;
+}
+.js-carousel .dots .dot.active {
+  opacity: 1;
+}
+.js-carousel .dots .dot + .dot {
+  margin-left: 8px;
+}
+.js-carousel {
+  position: relative;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.js-carousel .owl-stage {
+  position: relative;
+  margin: 0px auto;
+  -ms-touch-action: pan-Y;
+}
+.js-carousel .owl-stage:after {
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: '.';
+}
+.js-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.js-carousel .item {
+  position: relative;
+  float: left;
+  min-height: 1px;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+.js-carousel .item img {
+  display: block;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+.js-carousel.owl-loaded {
+  display: block;
+}
+.js-carousel.owl-loading {
+  display: block;
+  opacity: 0;
+}
+.js-carousel.owl-hidden {
+  opacity: 0;
+}
+.js-carousel.owl-refresh .item {
+  display: none;
+}
+.js-carousel.owl-drag .item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.js-carousel.owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.js-carousel.owl-rtl {
+  direction: rtl;
+}
+.js-carousel.owl-rtl .item {
+  float: right;
+}
+.js-carousel .nav.disabled,
+.js-carousel .dots.disabled {
+  display: none;
+}
+.js-carousel .nav .prev,
+.js-carousel .nav .next,
+.js-carousel .dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -khtml-user-select: none;
+}
+.no-js .js-carousel {
+  display: block;
+}
+.quickstart-list.container {
+  padding: 0;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .quickstart-list {
+    min-height: 302px;
+  }
+}
+.quickstart-list .item {
+  animation: fadeIn 300ms;
+}
+@media (max-width: 767px) {
+  #tutorial-navigator .js-carousel.owl-loaded .center .quickstart {
+    cursor: pointer;
+    background: #fff;
+    color: #5c666f;
+    pointer-events: auto;
+    opacity: 1;
+  }
+  #tutorial-navigator .js-carousel.owl-loaded .center .quickstart .cta {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #tutorial-navigator .js-carousel.owl-loaded .center .quickstart i,
+  #tutorial-navigator .js-carousel.owl-loaded .center .quickstart .symbol {
+    opacity: 1;
+  }
+  #tutorial-navigator .js-carousel.owl-loaded .center .quickstart .symbol {
+    background: #f3f3f3;
+  }
+}
+@media (max-width: 767px) {
+  #tutorial-navigator .js-carousel.owl-loaded .quickstart {
+    opacity: 0.3;
+    background: #a9b3bc;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    pointer-events: none;
+  }
+  #tutorial-navigator .js-carousel.owl-loaded .quickstart .symbol {
+    opacity: 0.5;
+  }
+  #tutorial-navigator .js-carousel.owl-loaded .quickstart .cta {
+    opacity: 1;
+    pointer-events: none;
+  }
+}
+#tutorial-navigator .quickstart {
+  white-space: normal;
+  vertical-align: top;
+  cursor: pointer;
+  padding: 15px 10px;
+  border-radius: 3px;
+  transition: background 100ms ease;
+  margin-bottom: 5px;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-duration: 200ms;
+}
+@media (max-width: 767px) {
+  #tutorial-navigator .quickstart {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    background-color: #fff;
+    color: #5c666f;
+  }
+  #tutorial-navigator .quickstart .symbol {
+    background-color: #f3f3f3;
+  }
+  #tutorial-navigator .quickstart .cta {
+    opacity: 1;
+  }
+}
+#tutorial-navigator .quickstart .symbol {
+  display: inline-block;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  position: relative;
+}
+#tutorial-navigator .quickstart .symbol:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#tutorial-navigator .quickstart .symbol i {
+  font-size: 40px;
+  top: 30%;
+  animation: none;
+  color: #363c42;
+}
+#tutorial-navigator .quickstart .btn {
+  letter-spacing: 0.005em;
+  font-size: 12px;
+}
+#tutorial-navigator .quickstart .title {
+  display: block;
+  color: #333;
+}
+#tutorial-navigator .quickstart .description {
+  color: rgba(0,0,0,0.86);
+  line-height: normal;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  max-width: 180px;
+}
+#tutorial-navigator .quickstart .cta {
+  opacity: 0;
+  transition: opacity 100ms ease;
+}
+#tutorial-navigator .quickstart .sample {
+  opacity: 0.5;
+  font-size: 12px;
+}
+#tutorial-navigator .quickstart[data-type="native"] .symbol:after {
+  background-image: url("https://auth0.com/docs/img/quickstarts/native-mobile.svg");
+}
+#tutorial-navigator .quickstart[data-type="spa"] .symbol:after {
+  background-image: url("https://auth0.com/docs/img/quickstarts/spa.svg");
+}
+#tutorial-navigator .quickstart[data-type="webapp"] .symbol:after {
+  background-image: url("https://auth0.com/docs/img/quickstarts/webapp.svg");
+}
+#tutorial-navigator .quickstart[data-type="backend"] .symbol:after {
+  background-image: url("https://auth0.com/docs/img/quickstarts/backend.svg");
+}
+@media (max-width: 767px) {
+  #tutorial-navigator .quickstart i,
+  #tutorial-navigator .quickstart .symbol {
+    opacity: 1;
+  }
+  #tutorial-navigator .quickstart .symbol {
+    background-color: #f3f3f3;
+  }
+  #tutorial-navigator .quickstart .cta {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+@media (min-width: 768px) {
+  #tutorial-navigator .quickstart:hover {
+    background-color: #fff;
+    color: #5c666f;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  }
+  #tutorial-navigator .quickstart:hover .symbol {
+    background-color: #f3f3f3;
+  }
+  #tutorial-navigator .quickstart:hover .cta {
+    opacity: 1;
+  }
+}
+.breadcrumbs {
+  font-size: 12px;
+  margin: 15px 10px;
+  padding: 3px 15px;
+  line-height: 2.5;
+  background: #fff;
+  border-radius: 3px;
+  display: inline-block;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+.breadcrumbs > div {
+  display: inline-block;
+}
+.breadcrumbs i {
+  font-size: 12px;
+  animation: none;
+  margin: 0;
+  position: relative;
+  top: 3px;
+  margin-left: 12px;
+  margin-right: 10px;
+  opacity: 0.5;
+}
+.breadcrumbs a {
+  color: #5c666f;
+  font-weight: normal;
+  display: inline-block;
+  cursor: pointer;
+}
+.breadcrumbs .plus {
+  padding: 0 5px;
+}
+.breadcrumbs .text {
+  color: #5c666f;
+  border-radius: 20px;
+}
+.breadcrumbs .text:hover {
+  opacity: 1;
+}
+#tutorial-template .loading-tutorial {
+  padding-top: 150px;
+}
+#tutorial-navigator {
+  min-height: 525px;
+  background: #f5f7f9;
+  position: relative;
+}
+#tutorial-navigator .container {
+  min-width: auto;
+  max-width: auto;
+}
+#tutorial-navigator .banner {
+  background: none;
+  color: #5c666f;
+  margin: 0;
+  transition: min-height 100ms ease;
+  color: #333;
+  padding: 0 0 40px;
+}
+#tutorial-navigator .banner i {
+  font-size: inherit;
+}
+#tutorial-navigator .banner h1,
+#tutorial-navigator .banner p {
+  color: #333;
+  line-height: 1.3;
+}
+#tutorial-navigator .banner p + button {
+  margin: 0 15px;
+}
+#tutorial-navigator .section-product h2 {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  margin: 0;
+  font-size: 35px;
+}
+#tutorial-navigator .section-product h2 span {
+  font-size: 14px;
+  color: #5c666f;
+  display: block;
+}
+@media (min-width: 992px) {
+  #tutorial-navigator .section-product h2 span {
+    display: inline;
+    margin-left: 30px;
+  }
+}
+#tutorial-navigator section .circle-list {
+  list-style: none;
+  padding: 0;
+  *zoom: 1;
+  width: auto;
+  margin-right: 0;
+}
+#tutorial-navigator section .circle-list:after {
+  clear: both;
+}
+#tutorial-navigator section .circle-list:after,
+#tutorial-navigator section .circle-list:before {
+  content: "";
+  display: table;
+}
+#tutorial-navigator section .circle-list li {
+  float: left;
+  width: 50%;
+  padding-right: 0;
+  background-clip: content-box;
+}
+@media (min-width: 568px) {
+  #tutorial-navigator section .circle-list {
+    *zoom: 1;
+    width: auto;
+    margin-right: 0;
+  }
+  #tutorial-navigator section .circle-list:after {
+    clear: both;
+  }
+  #tutorial-navigator section .circle-list:after,
+  #tutorial-navigator section .circle-list:before {
+    content: "";
+    display: table;
+  }
+  #tutorial-navigator section .circle-list li {
+    float: left;
+    width: 33.333333333333336%;
+    padding-right: 0;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 768px) {
+  #tutorial-navigator section .circle-list {
+    *zoom: 1;
+    width: auto;
+    margin-right: 0;
+  }
+  #tutorial-navigator section .circle-list:after {
+    clear: both;
+  }
+  #tutorial-navigator section .circle-list:after,
+  #tutorial-navigator section .circle-list:before {
+    content: "";
+    display: table;
+  }
+  #tutorial-navigator section .circle-list li {
+    float: left;
+    width: 20%;
+    padding-right: 0;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 992px) {
+  #tutorial-navigator section .circle-list {
+    *zoom: 1;
+    width: auto;
+    margin-right: 0;
+  }
+  #tutorial-navigator section .circle-list:after {
+    clear: both;
+  }
+  #tutorial-navigator section .circle-list:after,
+  #tutorial-navigator section .circle-list:before {
+    content: "";
+    display: table;
+  }
+  #tutorial-navigator section .circle-list li {
+    float: left;
+    width: 16.666666666666668%;
+    padding-right: 0;
+    background-clip: content-box;
+  }
+}
+#tutorial-navigator .question-text,
+#tutorial-navigator .tenant-switcher {
+  margin: 20px 0;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: rgba(0,0,0,0.58);
+  font-size: 20px;
+}
+#tutorial-navigator .tenant-switcher {
+  max-width: 320px;
+}
+@media (min-width: 768px) {
+  #tutorial-navigator .tenant-switcher {
+    max-width: none;
+  }
+}
+#tutorial-navigator .tenant-switcher .text {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  #tutorial-navigator .tenant-switcher .text {
+    font-size: 20px;
+  }
+}
+#tutorial-navigator .tenant-switcher .icon {
+  font-size: 16px;
+  opacity: 0.5;
+  position: relative;
+  top: 0.2em;
+  padding-left: 1px;
+}
+#tutorial-navigator .tenant-switcher .custom-select {
+  margin: 0 10px;
+  max-width: 30vw;
+}
+#tutorial-navigator .tutorial-content {
+  display: none;
+}
+#tutorial-navigator .is-result .tutorial-content {
+  display: block;
+}
+#tutorial-navigator .is-result .tutorial-wizard {
+  display: none;
+}
+#tutorial-navigator [data-skip] {
+  background: none;
+  outline: none;
+  border: 0;
+  background-color: #eb5424;
+  font-size: 13px;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 15px;
+  padding: 6px 15px;
+}
+#tutorial-navigator .circle-list {
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  list-style: none;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  #tutorial-navigator .circle-list {
+    max-width: 800px;
+  }
+}
+@media (min-width: 992px) {
+  #tutorial-navigator .circle-list {
+    max-width: none;
+  }
+}
+#tutorial-navigator .circle-list li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 15px;
+  cursor: pointer;
+}
+@media (min-width: 568px) {
+  #tutorial-navigator .circle-list li {
+    margin: 10px 30px;
+  }
+}
+#tutorial-navigator .circle-logo {
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  #tutorial-navigator .circle-logo {
+    font-size: 13px;
+  }
+}
+.tutorial-toc {
+  margin-top: 20px;
+  padding: 0;
+}
+.tutorial-toc ul,
+.tutorial-toc li {
+  margin: 0;
+  padding: 0;
+}
+.tutorial-toc .tutorial-toc-title {
+  font-size: 24px;
+  color: rgba(0,0,0,0.54);
+}
+.tutorial-toc .tutorial-toc-description {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0,0,0,0.54);
+  margin: 10px 0 20px;
+}
+.tutorial-toc .tutorial-toc-article {
+  cursor: pointer;
+  list-style: none;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: rgba(0,0,0,0.54);
+}
+.tutorial-toc .tutorial-toc-article:hover {
+  color: rgba(0,0,0,0.86);
+}
+.tutorial-toc .tutorial-toc-article.selected {
+  color: rgba(0,0,0,0.86);
+  font-weight: 700;
+}
+.tutorial-next-steps {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+  padding: 40px 40px 26px 40px;
+  margin: 20px 0;
+}
+.tutorial-next-steps h2 {
+  font-size: 24px;
+  margin: 0px;
+}
+.tutorial-next-steps p {
+  margin: 4px 0 28px 0;
+  color: rgba(0,0,0,0.54);
+}
+.tutorial-next-steps .tutorial-next-steps-articles {
+  margin: 0;
+  padding: 0;
+  max-width: 600px;
+}
+.tutorial-next-steps .tutorial-next-steps-articles li {
+  list-style-type: none;
+  display: inline-block;
+  font-weight: 500;
+  width: 50%;
+  margin-bottom: 14px;
+}
+.tutorial-next-steps .tutorial-next-steps-articles li a:link,
+.tutorial-next-steps .tutorial-next-steps-articles li a:visited {
+  color: rgba(0,0,0,0.86);
+}
+.tutorial-next-steps .tutorial-next-steps-articles li a:hover,
+.tutorial-next-steps .tutorial-next-steps-articles li a:active {
+  color: #0a84ae;
+}
+.tutorial-next-steps .tutorial-next-steps-articles li i {
+  padding-right: 6px;
+}
+@media screen and (max-width: 480px) {
+  .tutorial-next-steps .tutorial-next-steps-articles li {
+    width: 100%;
+  }
+}
+.tutorial-prev-next {
+  overflow: hidden;
+  margin: 60px 0;
+  padding-top: 20px;
+  font-size: 16px;
+  border-top: 1px solid #d0d2d3;
+}
+.tutorial-prev-next .tutorial-prev-next-header {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: rgba(0,0,0,0.26);
+  text-transform: uppercase;
+}
+.tutorial-prev-next a {
+  cursor: pointer;
+}
+.tutorial-prev-next i {
+  position: relative;
+  top: 2px;
+}
+.tutorial-prev-next .tutorial-prev-next-prev {
+  float: left;
+  text-align: left;
+}
+.tutorial-prev-next .tutorial-prev-next-next {
+  float: right;
+  text-align: right;
+}
