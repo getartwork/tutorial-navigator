@@ -1,3 +1,9 @@
+## [3.9.3] - 2016-11-08
+
+### Fixed
+- [] Sort quickstarts. (`Jake Pyne`)
+  https://github.com/auth0/tutorial-navigator/commit/7d384bb655c339dc51a60bf4891b24cab5d2befd
+
 ## [3.9.2] - 2016-10-11
 
 ### Fixed
